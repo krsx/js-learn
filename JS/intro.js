@@ -4,7 +4,7 @@ document.writeln("Hello World");
 document.writeln("<br>");
 document.writeln("Nama: " + "Krisna Erlangga");
 
-alert("Hello World");
+// alert("Hello World");
 
 const max = 57;
 let actual;
@@ -20,4 +20,30 @@ let result;
 let a = 5,
   b = 10;
 result = a + b;
-alert(result);
+// alert(result);
+
+console.log(10 == 10);
+console.log(10 === "10");
+
+x = 0;
+if (x >= 5 && x <= 10) {
+  console.log("Correct!");
+} else {
+  console.log("Not Correct!");
+}
+
+let number = 10;
+let string = "10";
+let number2 = 10;
+
+console.log(number + string);
+console.log(number + number2);
+
+x % 2 == 0 ? console.log("\"'True'\"") : console.log("False");
+
+if ("Krisna" == "Krisna") {
+  console.log("Ashiapp");
+}
+
+let namaKu = "Krisna";
+console.log(namaKu.length);
