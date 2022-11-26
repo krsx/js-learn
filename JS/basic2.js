@@ -65,18 +65,25 @@ console.log(angkaFinder);
 
 //ARRAY PROJECTS
 let penumpang = ["Putri", undefined, "Krisna"];
-let same = true;
 
-penumpang.forEach(function (penumpang, index) {
-  if (penumpang === undefined) {
-    console.log("Ini indexnya " + index);
-    return index;
+function undefinedFinder(penumpang) {
+  let undefinedFinderIndex;
+
+  for (let index = 0; index < penumpang.length; index++) {
+    if (penumpang[index] === undefined) {
+      console.log("Ini indexnya " + index);
+      undefinedFinderIndex = index;
+      return undefinedFinderIndex;
+    }
   }
-});
+}
 
 function tambahPenumpang(nama, penumpang) {
+  let same = true;
+
   if (penumpang.length === 0) {
     penumpang.push(nama);
+    return penumpang;
   } else {
     penumpang.find(function (namaCari) {
       if (nama === namaCari) {
@@ -86,23 +93,54 @@ function tambahPenumpang(nama, penumpang) {
 
     if (same) {
       let undefinedIndex;
-      penumpang.forEach(function (penumpang, index) {
-        if (penumpang === undefined) {
-          console.log("Ini indexnya " + index);
-          undefinedIndex = index;
-        }
-      });
-
+      undefinedIndex = undefinedFinder(penumpang);
+      console.log("Ini undefinedIndex: " + undefinedIndex);
       if (undefinedIndex !== undefined) {
         penumpang[undefinedIndex] = nama;
+        return penumpang;
       } else {
         penumpang.push(nama);
+        return penumpang;
       }
     }
   }
 }
 
-tambahPenumpang("Iu", penumpang);
+// var tambahPenumpang = function (namaPenumpang, arrPenumpang) {
+//   if (penumpang.length === 0) {
+//     penumpang.push(nama);
+//     return penumpang;
+//   } else {
+//     for (let i = 0; i < penumpang.length; i++) {
+//       if (penumpang[i] === undefined) {
+//         penumpang[i] = namaPenumpang;
+//         return penumpang;
+//       } else if (i === penumpang.length + 1) {
+//         penumpang.push(namaPenumpang);
+//       }
+//     }
+//   }
+// };
 
+function hapusPenumpang(namaPenumpang, penumpang) {
+  let sameIndex;
+
+  if (penumpang.length === 0) {
+    console.log("Angkot kosong!");
+  } else {
+    penumpang.find(function (namaCari, index) {
+      if (namaPenumpang === namaCari) {
+        return (sameIndex = index);
+      }
+    });
+    if (sameIndex !== undefined) {
+      penumpang[sameIndex] = undefined;
+    } else {
+      console.log("Namanya salah bos!");
+    }
+  }
+}
+tambahPenumpang("Bagong", penumpang);
+hapusPenumpang("Kris", penumpang);
 console.log(penumpang);
 //ARRAY PROJECTS
