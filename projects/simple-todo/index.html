@@ -18,11 +18,9 @@
       }
     </style>
   </head>
-  <body>
-    <div
-      class="container max-w-full bg-[#F6F6F6] h-screen flex justify-center items-center"
-    >
-      <div class="container h-screen w-1/2 border-red-600 flex flex-col">
+  <body class="bg-[#F6F6F6]">
+    <div class="w-full flex justify-center items-center">
+      <div class="container h-full w-1/2 border-red-600 flex flex-col">
         <div class="header">
           <h1 class="text-[36px] font-medium mb-1 mt-10">
             Welcome back, Krisna
@@ -30,8 +28,8 @@
           <h3 class="text-base text-[#666666] mb-12">
             You've got 4 tasks coming up in the next days.
           </h3>
-          <h2 class="text-base text-black font-medium mb-1">Add new task</h2>
-          <div class="todo-form">
+          <h2 class="text-lg text-black font-medium mb-1">Add new task</h2>
+          <div class="todo-form mb-12">
             <form action="" class="flex text-lg">
               <input
                 type="text"
@@ -48,6 +46,8 @@
             </form>
           </div>
         </div>
+        <h2 class="text-lg text-black font-medium mb-1">Your task</h2>
+
         <div class="todo-container container">
           <ul class="todo-list">
             <!-- <div class="todo">
@@ -57,6 +57,7 @@
             </div> -->
           </ul>
         </div>
+        <div class="spacer mb-10"></div>
       </div>
     </div>
     <script
