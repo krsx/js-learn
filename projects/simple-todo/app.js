@@ -50,4 +50,8 @@ function addTodo(event) {
 
 function deleteTodo(event) {
   const item = event.target;
+  console.log(item);
+  if (item.classList[0] === "delete-btn") {
+    item.parentElement.remove();
+  }
 }
