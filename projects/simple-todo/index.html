@@ -9,43 +9,53 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <style>
       * {
-        font-family: "Syne", sans-serif;
+        font-family: "Inter", sans-serif;
       }
     </style>
   </head>
   <body>
     <div
-      class="container max-w-full bg-white h-screen flex justify-center items-center"
+      class="container max-w-full bg-[#F6F6F6] h-screen flex justify-center items-center"
     >
-      <div
-        class="container w-[600px] h-screen border-2 flex flex-col items-center"
-      >
-        <h1 class="text-[60px] font-bold text-center mb-2 mt-10">
-          Simple Todo
-        </h1>
-        <div class="todo-form">
-          <form action="" class="flex text-lg">
-            <input
-              type="text"
-              name=""
-              id=""
-              class="todo-input py-4 px-3 w-max mr-3 border-[2px] border-black rounded-md h-9"
-            />
-            <button
-              type="submit"
-              class="todo-button text-3xl px-4 bg-black rounded-md text-white"
-            >
-              +
-            </button>
-          </form>
+      <div class="container h-screen w-1/2 border-red-600 flex flex-col">
+        <div class="header">
+          <h1 class="text-[36px] font-medium mb-1 mt-10">
+            Welcome back, Krisna
+          </h1>
+          <h3 class="text-base text-[#666666] mb-12">
+            You've got 4 tasks coming up in the next days.
+          </h3>
+          <h2 class="text-base text-black font-medium mb-1">Add new task</h2>
+          <div class="todo-form">
+            <form action="" class="flex text-lg">
+              <input
+                type="text"
+                name=""
+                id=""
+                class="todo-input py-4 px-3 w-max mr-4 shadow-sm border rounded-md h-9"
+              />
+              <button
+                type="submit"
+                class="todo-button text-sm px-4 bg-blue-400 rounded-md text-white"
+              >
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </form>
+          </div>
         </div>
         <div class="todo-container container">
-          <ul class="todo-list"></ul>
+          <ul class="todo-list">
+            <!-- <div class="todo">
+              <li></li>
+              <button class="">delete</button>
+              <button class="">checked</button>
+            </div> -->
+          </ul>
         </div>
       </div>
     </div>
